@@ -14,7 +14,7 @@
 
 			</li>
 			<li class="site-text show-for-small-only">
-			<h4 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 30px";><a href="<?php bloginfo('url');?>"><?php bloginfo('description');?></a></h4>
+			<h4 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 30px";><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h4>
 		</li>
 		</ul>
 	</div>

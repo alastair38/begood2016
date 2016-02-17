@@ -10,7 +10,9 @@
 );
 
 $relatedposts = get_posts( $args );
-echo '<h5>Related Posts</h5>';
+if ($relatedposts) {
+	echo '<h5>Related Posts</h5>';
+}
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
 // 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -48,7 +50,10 @@ wp_reset_postdata();
 );
 
 $relatedposts = get_posts( $args );
-echo '<h5>Related Posts</h5>';
+if ($relatedposts) {
+	echo '<h5>Related Posts</h5>';
+}
+
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
 // 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));

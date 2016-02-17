@@ -10,7 +10,7 @@ the_field('section_description', $home_id);
 </div>
 
 <?php
-	$ids = get_field('home_page_links', false, false);
+	$ids = get_field('front_pages', false, false);
 
 	$query = new WP_Query(array(
 		'post_type'      	=> 'page',
