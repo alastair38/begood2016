@@ -62,6 +62,84 @@ GENERAL STYLES
 	z-index: 100000;
 }
 
+#cookie-bar {
+  background:rgba(0,0,0, .85);
+  height:2rem;
+  line-height:2rem;
+  color:#eeeeee;
+  text-align:center;
+  padding:3px 0;
+  &.fixed {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
+  &.fixed.bottom {
+    bottom:0px;
+    top:auto;
+  }
+}
+
+#cookie-bar p {margin:0; padding:0;}
+#cookie-bar a {color:#ffffff; display:inline-block; border-radius:3px; text-decoration:none; padding:0 6px; margin-left:8px;}
+#cookie-bar .cb-enable {background:$success-color;}
+#cookie-bar .cb-enable:hover {background:$success-color;}
+#cookie-bar .cb-disable {background:$alert-color;}
+#cookie-bar .cb-disable:hover {background:$alert-color;}
+#cookie-bar .cb-policy {background:$highlight-color;}
+#cookie-bar .cb-policy:hover {background:$highlight-color;}
+
+/*********************
+Scroll to top button
+*********************/
+
+.scrollToTop{
+	height:1em;
+    width: 1em;
+	padding:0em;
+    margin: 0;
+    border-left: 1px solid;
+    border-top: 1px solid;
+	background: transparent;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	bottom:1em;
+	right:1em;
+	display:none;
+    transform: rotate(45deg);
+    z-index: 11;
+}
+
+
+button.scrollToTop:hover, button.scrollToTop:focus {
+	color: $highlight-color;
+  background: transparent !important;
+  outline: none;
+}
+
+button.scrollToTop:focus + #scrollAlert,
+button.scrollToTop:hover + #scrollAlert
+{
+    opacity: 1;
+    z-index: 10;
+}
+
+#scrollAlert {
+  position:fixed;
+	bottom:15px;
+  padding: 2px 8px;
+	right:80px;
+  color: $white;
+  display: inline-block;
+  align-content: center;
+	background: rgba(0,0,0,.85);
+  opacity: 0;
+  transition: 500ms;
+}
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -338,9 +416,15 @@ img {
   }
 }
 
-.latest_tweets.columns {
-  border: 2px solid $light-gray;
+.twitter_wrap {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#latest_tweets {
+  background: $white;
   padding: 1em 0;
+  border: 2px solid $light-gray;
   margin-bottom: 1em;
   h5 {
       display: inline-block;
@@ -403,6 +487,7 @@ li.categories {
 
 .home .entry-content {
   padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .home .article-header {
@@ -431,7 +516,8 @@ li.categories {
     }
   }
 
-.page-template-page-projects .entry-content {
+.page-template-page-projects .entry-content,
+.page-template-default .entry-content {
 padding: 0;
 
 	img {
@@ -975,10 +1061,13 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+
 .footer {
 	text-align: center;
 	clear: both;
+  background: $light-gray;
 	margin-top: 1em;
+  padding: 2em 0 1em 0;
   i {
     padding: 0 .25rem;
   }

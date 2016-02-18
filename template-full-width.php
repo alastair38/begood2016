@@ -21,19 +21,22 @@ Template Name: Full Width (No Sidebar)
 					<section class="entry-content large-12 columns" itemprop="articleBody">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
+						<img class="large-4 columns" src="<?php echo get_template_directory_uri() . '/assets/images/University_of_Oxford.png';?>">
+
+						<img class="large-4 columns" src="<?php echo get_template_directory_uri() . '/assets/images/wellcome_trust.jpg';?>">
 				</section> <!-- end article section -->
 
 			<?php endwhile; endif; ?>
 
 
-				<aside class="large-6 medium-5 columns" role="complementary">
+				<aside class="large-6 medium-6 columns" role="complementary">
 
 				<?php get_template_part( 'parts/loop', 'posts' );
 
 				?>
 				</aside>
 
-				<aside class="large-6 medium-5 columns" role="complementary">
+				<aside class="large-6 medium-6 columns" role="complementary">
 
 				<?php get_template_part( 'parts/loop', 'publications' ); ?>
 				</aside>
@@ -47,11 +50,19 @@ Template Name: Full Width (No Sidebar)
 	</aside>
 
 
+	<div class="twitter_wrap large-12 columns">
 
+									<?php 	if ( is_front_page() ) {
+										get_template_part( 'parts/content', 'twitter' );
+									}?>
+
+		</div>
 
 
 
 		</div> <!-- end #inner-content -->
+
+
 
 	</div> <!-- end #content -->
 
