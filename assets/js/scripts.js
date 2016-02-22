@@ -32,9 +32,8 @@ jQuery(document).ready(function() {
     autoplaySpeed: 5000,
     fade: true,
     cssEase: 'linear',
-    prevArrow: '<button type="button" class="slick-prev">Back</button>',
-    nextArrow: '<button type="button" class="slick-next">Go</button>',
-    appendArrows: '<div class="slick-slide">'
+    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>'
   });
 
 });
