@@ -1,6 +1,5 @@
 <?php if ($post->post_parent) {
 	$parentObj = get_post( $post->post_parent );
-	$cat_name = $parentObj->post_name . ' - use this as category slug for related posts on child pages';
 	$args = array(
 	'posts_per_page' => 3,
 	'post_type' => 'post',
@@ -39,8 +38,6 @@ foreach ( $relatedposts as $post ) :
 endforeach;
 wp_reset_postdata();
 } else {
-	$cat_name = $post->post_name . ' - use this as category slug for related posts on parent pages';
-	echo $cat_name;
 	$args = array(
 	'posts_per_page' => 3,
 	'post_type' => 'post',
@@ -51,7 +48,7 @@ wp_reset_postdata();
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<h5>Related Posts</h5>';
+	echo '<div class="latest_posts columns"><h5>Related Posts</h5>';
 }
 
 foreach ( $relatedposts as $post ) :
@@ -78,4 +75,5 @@ foreach ( $relatedposts as $post ) :
 <?php
 
 endforeach;
+echo '</div>';
 wp_reset_postdata(); } ?>

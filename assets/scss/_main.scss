@@ -472,6 +472,10 @@ img {
 }
 
 .latest_posts, .latest_pubs, .latest_links {
+  &.columns {
+    border: 1px solid $medium-gray;
+    padding: 1rem;
+  }
   h5 {
     text-align: center;
     background: $light-gray;
@@ -750,22 +754,40 @@ padding: 0;
 }
 
 button.slick-next.slick-arrow {
-  color: $white;
-  font-size: 2rem;
   position: absolute;
-  height: 6%;
-  bottom: 47%;
-  right: 1rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255,255,255,.15);
+  transition: 350ms;
+  &:hover {
+    background: rgba(0,0,0,.15);
+  }
+  .fa {
+    color: $highlight-color;
+    font-size: 4rem;
+    margin: auto;
+    padding: 0 5px;
+  }
 }
 
 button.slick-prev.slick-arrow {
-  color: $white;
-  font-size: 2rem;
   position: absolute;
-  height: 6%;
-  left: 1rem;
-  top: 47%;
-  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255,255,255,.15);
+  transition: 350ms;
+  &:hover {
+    background: rgba(0,0,0,.15);
+  }
+  .fa {
+    color: $highlight-color;
+    font-size: 4rem;
+    margin: auto;
+    padding: 0 5px;
+  }
+  z-index: 10;
 }
 
 

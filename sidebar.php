@@ -42,7 +42,7 @@ echo $html;
 	<div class="row">
 	<div class="about-links <?php echo $page->post_name; ?>">
 	<h3><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h3>
-	<?php echo 'Some content goes here';?></div>
+	<?php // echo 'Some content goes here';?></div>
 	</div>
 	<?php }
 	}

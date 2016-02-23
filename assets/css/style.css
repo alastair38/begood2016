@@ -4419,6 +4419,10 @@ img {
   margin-top: 2em;
   border-left: 8px solid #3adb76; }
 
+.latest_posts.columns, .latest_pubs.columns, .latest_links.columns {
+  border: 1px solid #cacaca;
+  padding: 1rem; }
+
 .latest_posts h5, .latest_pubs h5, .latest_links h5 {
   text-align: center;
   background: #e6e6e6; }
@@ -4641,21 +4645,35 @@ li.categories {
         font-size: 1em; } }
 
 button.slick-next.slick-arrow {
-  color: #fefefe;
-  font-size: 2rem;
   position: absolute;
-  height: 6%;
-  bottom: 47%;
-  right: 1rem; }
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: 350ms; }
+  button.slick-next.slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.15); }
+  button.slick-next.slick-arrow .fa {
+    color: #27AAE1;
+    font-size: 4rem;
+    margin: auto;
+    padding: 0 5px; }
 
 button.slick-prev.slick-arrow {
-  color: #fefefe;
-  font-size: 2rem;
   position: absolute;
-  height: 6%;
-  left: 1rem;
-  top: 47%;
-  z-index: 100; }
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: 350ms;
+  z-index: 10; }
+  button.slick-prev.slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.15); }
+  button.slick-prev.slick-arrow .fa {
+    color: #27AAE1;
+    font-size: 4rem;
+    margin: auto;
+    padding: 0 5px; }
 
 #content .rotatingtweets {
   border: none; }
