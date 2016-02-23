@@ -4419,9 +4419,12 @@ img {
   margin-top: 2em;
   border-left: 8px solid #3adb76; }
 
-.latest_posts.columns, .latest_pubs.columns, .latest_links.columns {
+.related_posts.columns {
   border: 1px solid #cacaca;
   padding: 1rem; }
+  .related_posts.columns h5 {
+    text-align: center;
+    background: #e6e6e6; }
 
 .latest_posts h5, .latest_pubs h5, .latest_links h5 {
   text-align: center;

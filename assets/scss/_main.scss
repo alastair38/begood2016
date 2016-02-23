@@ -471,11 +471,19 @@ img {
 	border-left: 8px solid $success-color;
 }
 
-.latest_posts, .latest_pubs, .latest_links {
+.related_posts {
   &.columns {
     border: 1px solid $medium-gray;
     padding: 1rem;
+    h5 {
+      text-align: center;
+      background: $light-gray;
+    }
   }
+
+}
+
+.latest_posts, .latest_pubs, .latest_links {
   h5 {
     text-align: center;
     background: $light-gray;

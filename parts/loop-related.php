@@ -10,7 +10,7 @@
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<h5>Related Posts</h5>';
+	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
 }
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
@@ -36,6 +36,7 @@ foreach ( $relatedposts as $post ) :
 <?php
 
 endforeach;
+echo '</div>';
 wp_reset_postdata();
 } else {
 	$args = array(
@@ -48,7 +49,7 @@ wp_reset_postdata();
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<div class="latest_posts columns"><h5>Related Posts</h5>';
+	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
 }
 
 foreach ( $relatedposts as $post ) :
