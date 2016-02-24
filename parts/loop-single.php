@@ -6,12 +6,13 @@
     </header> <!-- end article header -->
 
     <section class="entry-content" itemprop="articleBody">
-		<?php the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
 
 	<footer class="article-footer">
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
+		<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
+
+	</footer> <!-- end article footer -->
 		<?php get_template_part( 'parts/content', 'share' ); ?>
 	<?php
 	if (is_singular( 'post' )) {

@@ -1,4 +1,4 @@
-<div class="related_posts columns">
+
 <?php if ($post->post_parent) {
 	$parentObj = get_post( $post->post_parent );
 	$args = array(
@@ -11,8 +11,7 @@
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<h5>Related Posts</h5>';
-}
+	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
 // 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -37,6 +36,8 @@ foreach ( $relatedposts as $post ) :
 <?php
 
 endforeach;
+echo '</div>';
+}
 wp_reset_postdata();
 } else {
 	$args = array(
@@ -49,8 +50,8 @@ wp_reset_postdata();
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<h5>Related Posts</h5>';
-}
+	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
+
 
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
@@ -76,5 +77,6 @@ foreach ( $relatedposts as $post ) :
 <?php
 
 endforeach;
+echo '</div>';
+}
 wp_reset_postdata(); } ?>
-</div>

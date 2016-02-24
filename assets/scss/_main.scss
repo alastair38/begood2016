@@ -231,10 +231,10 @@ HEADER STYLES
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */
 	box-shadow: 1px 1px 3px 0px $light-gray;
 	z-index: 100;
-  -webkit-animation: show 2000ms 1; /* Safari 4+ */
-  animation: show 2000ms 1;
-  -moz-animation: show 2000ms 1;
-  -o-animation: show 2000ms 1;
+  -webkit-animation: show 1000ms 1; /* Safari 4+ */
+  animation: show 1000ms 1;
+  -moz-animation: show 1000ms 1;
+  -o-animation: show 1000ms 1;
 	ul.off-canvas-list li {
 		list-style: none;
 	}
@@ -600,10 +600,21 @@ li.categories {
 	}
 }
 
+.edit_link a {
+  color: $white;
+  background: $highlight-color;
+  border-radius: 2px;
+  display: inline;
+  padding: 2px 5px;
+  transition: 350ms;
+  &:hover, &:focus {
+    background: scale-color($highlight-color, $lightness: -44%);
+  }
+}
+
 // Entry content
 
 .home .entry-content {
-
   @include breakpoint(large) {
     font-size: 1.25rem;
     }
@@ -611,7 +622,7 @@ li.categories {
 
 .page-template-page-projects .entry-content,
 .page-template-default .entry-content {
-padding: 0;
+  padding: 0;
 
 	img {
 		max-width: 100%;
@@ -645,8 +656,15 @@ padding: 0;
 		border: 1px solid #cecece;
 		padding: 10px;
 		}
-
 }
+
+.sidebar {
+  .size-full {
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+}
+
 
 .wp-caption {
 	max-width: 100%;

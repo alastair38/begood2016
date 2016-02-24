@@ -2,6 +2,9 @@
 
 	<?php
 	global $post;
+	if ( has_post_thumbnail() && is_page() || is_single() ) {
+	the_post_thumbnail('full');
+	}
 	$children = get_pages( array( 'child_of' => $post->ID ) );
 	if ( is_page() && $post->post_parent ) {
 
