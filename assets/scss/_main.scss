@@ -48,7 +48,18 @@ padding: 3.5em 0 3.5em 6.5em;}
 padding: .5em 1em .5em 2em; }
 }
 
-
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
 
 /*********************
 GENERAL STYLES
@@ -694,12 +705,26 @@ li.categories {
   background: $secondary-color;
 }
 
+.waves-effect.waves-dark {
+  display: block !important;
+}
+
+.fixed-action-btn.horizontal ul {
+  text-align: center !important;
+  background: transparent;
+  li a {
+    color: $white;
+    padding: 0 5px;
+  }
+}
+
 .home-links, .about-links {
 	background: $highlight-color;
 	margin: 1em 0;
 	position: relative;
 	text-align: right;
 	padding: 0 10px;
+
 	h3 {
 		text-transform: uppercase;
 		text-align: right;
@@ -771,7 +796,7 @@ li.categories {
     background: rgba(255,255,255,.9);
     bottom: 2rem;
     left: 3rem;
-    padding: 5px;
+    padding: 10px;
     @include breakpoint(medium) {
     font-size: 1em;
     }

@@ -25,7 +25,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 	<div style="background: url(<?php echo $thumb_url;?>) no-repeat center center; background-size: cover;">
 
-		 <article>
+		 <article class="waves-effect">
 			 <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 			 <span class="byline">
 				Published <time

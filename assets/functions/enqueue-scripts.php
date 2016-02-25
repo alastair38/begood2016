@@ -8,6 +8,8 @@ function site_scripts() {
     // Load Owl Carousel files in footer
     wp_enqueue_script( 'owl-carousel', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery'), '', true );
 
+    wp_enqueue_script( 'mojs', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js', array(), '', true );
+
     // Adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.js', array( 'jquery' ), '6.0', true );
 
@@ -20,6 +22,8 @@ function site_scripts() {
     wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Questrial');
 
     wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+    wp_enqueue_style( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css');
 
     // Register main stylesheet
     wp_enqueue_style( 'owl-css', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css' );

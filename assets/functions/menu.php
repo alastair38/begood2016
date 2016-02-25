@@ -82,7 +82,7 @@ function add_login_link( $items, $args )
 
         if (!is_user_logged_in())
         {
-            $items .= '<li id="login"><a href="'. wp_login_url() .'"><i class="fa fa-sign-in"></i> Log In</a></li>';
+            $items .= '<li id="login" class="waves-effect waves-light"><a href="'. wp_login_url() .'"><i class="fa fa-sign-in"></i> Log In</a></li>';
         }
     }
     return $items;
@@ -97,11 +97,12 @@ function add_logout_link( $items, $args )
     {
         if ( is_user_logged_in())
         {
-						$items .= '<li class="has-submenu is-dropdown-submenu-parent"><a href="#">Add Content</a><ul class="menu submenu is-dropdown-submenu first-sub vertical">';
-            $items .= '<li><a href="' . admin_url() . 'post-new.php">Add Blog Post</a></li>';
-            $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=resource">Add Resource</a></li>';
-            $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">Add News Report</a></li>';
-            $items .= '<li><a href="'. get_edit_user_link() .'">Edit Profile</a></li></ul></li>';
+						// $items .= '<li class="has-submenu is-dropdown-submenu-parent"><a href="#">Add Content</a><ul class="menu submenu is-dropdown-submenu first-sub vertical">';
+            // $items .= '<li><a href="' . admin_url() . 'post-new.php">Add Blog Post</a></li>';
+            // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=resource">Add Resource</a></li>';
+            // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">Add News Report</a></li>';
+            // $items .= '<li><a href="'. get_edit_user_link() .'">Edit Profile</a></li></ul></li>';
+						$items .= '<li><a href="'. get_edit_user_link() .'">Edit Profile</a></li>';
         }
     }
     return $items;
@@ -115,7 +116,7 @@ function add_social_links( $items, $args )
     {
         if ( is_user_logged_in())
         {
-						$items .= '<li id="logout"><a href="'. wp_logout_url(home_url()) .'"><i class="fa fa-sign-out"></i> Log Out</a></li>';
+						$items .= '<li id="logout" class="waves-effect waves-light"><a href="'. wp_logout_url(home_url()) .'"><i class="fa fa-sign-out"></i>Log Out</a></li>';
         }
     }
     return $items;

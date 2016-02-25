@@ -2,7 +2,7 @@
 
 	<header class="article-headercolumns">
 		<h1 class="page-title"><?php the_title(); ?></h1>
-			<?php edit_post_link('Edit Page', '<span class="edit_link">', '</span>'); ?>
+			<?php edit_post_link('Edit Page', '<span class="edit_link wave-effect waves-light">', '</span>'); ?>
 		<?php
 		if ( is_front_page() ) {?>
 		<span class="front label"><?php bloginfo('description');?></span>

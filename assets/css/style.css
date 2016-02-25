@@ -4084,6 +4084,17 @@ ANIMATION
     background-size: 70px;
     padding: .5em 1em .5em 2em; } }
 
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5); } }
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5); } }
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -4593,6 +4604,16 @@ li.categories {
 #projects {
   background: #CFD8DC; }
 
+.waves-effect.waves-dark {
+  display: block !important; }
+
+.fixed-action-btn.horizontal ul {
+  text-align: center !important;
+  background: transparent; }
+  .fixed-action-btn.horizontal ul li a {
+    color: #fefefe;
+    padding: 0 5px; }
+
 .home-links, .about-links {
   background: #27AAE1;
   margin: 1em 0;
@@ -4656,7 +4677,7 @@ li.categories {
     background: rgba(255, 255, 255, 0.9);
     bottom: 2rem;
     left: 3rem;
-    padding: 5px; }
+    padding: 10px; }
     @media screen and (min-width: 32em) {
       .carousel article {
         font-size: 1em; } }

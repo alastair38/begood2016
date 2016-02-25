@@ -29,6 +29,7 @@
 		<?php joints_top_nav(); ?>
 	</div>
 
+	<?php get_template_part( 'parts/content', 'edit' ); ?>
 
 	<!-- <span class="top-bar-right large-2 large-offset-10 funders show-for-large">
 

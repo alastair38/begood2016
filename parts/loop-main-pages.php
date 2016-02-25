@@ -22,7 +22,7 @@ the_field('section_description', $home_id);
 	?>
 	<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 	<div class="large-4 medium-6 columns end">
-	<div class="home-links <?php echo $page->post_name; ?>">
+	<div class="home-links waves-effect waves-dark <?php echo $page->post_name; ?>">
 	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	<?php echo the_field('project_description');?></div>
 	</div>
