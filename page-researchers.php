@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Researchers
+*/
+?>
+
 <?php get_header(); ?>
 
 	<div id="content">

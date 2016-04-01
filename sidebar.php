@@ -2,12 +2,12 @@
 
 	<?php
 	global $post;
-	if ( has_post_thumbnail() && is_page() || is_single() ) {
-		the_post_thumbnail('full');
+
+if ( has_post_thumbnail() && is_page() || is_single() ) {
+	the_post_thumbnail('large');
 }
  	$children = get_pages( array( 'child_of' => $post->ID ) );
-	if ( is_page() && $post->post_parent ) {
-
+	if ( is_page_template( 'page-projects.php' ) && $post->post_parent ) {
 		 get_template_part( 'parts/loop', 'siblings' );
 
 	} else if ( is_page()  && count( $children ) > 0 ) {
@@ -33,25 +33,10 @@ echo $html;
 		get_template_part( 'parts/loop', 'resource-publications' );
 
 		echo '</aside>';
-} else if (is_page('about')) {
-	$mypages = get_pages( array( 'sort_order' => 'desc', 'parent' => 0 ) );
-	$i = 0;
-	foreach( $mypages as $page ) {
-	$children = get_pages( array( 'child_of' => $page->ID ) );
-	$content = $page->post_excerpt;
-	$content = apply_filters( 'the_content', $content );
-	$i++;
-	if($children) {?>
-	<div class="row">
-	<div class="about-links <?php echo $page->post_name; ?>">
-	<h3><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h3>
-	<?php // echo 'Some content goes here';?></div>
-	</div>
-	<?php }
-	}
-} else {
-	get_template_part( 'parts/loop', 'posts' );
+}  else {
+	//get_template_part( 'parts/loop', 'posts' );
 }
+
 ?>
 
 </div>

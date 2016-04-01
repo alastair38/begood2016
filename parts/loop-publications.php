@@ -20,7 +20,8 @@
 	);
 
 	$lastpublications = get_posts( $args );
-	echo '<h5>Latest Publications</h5>';
+	if($lastpublications){
+		echo '<h5>Latest Publications</h5>';
 	foreach ( $lastpublications as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -43,6 +44,11 @@
 	<?php
 
 	endforeach;
-	wp_reset_postdata(); ?>
+	wp_reset_postdata(); }
+	else {
+		echo '<h5 class="show-for-large">Latest Publications</h5><p class="show-for-large">
+		Our latest publications will appear here soon
+		</p>';
+	} ?>
 
 </div>

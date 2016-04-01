@@ -20,6 +20,15 @@ if ( $parent->have_posts() ) : ?>
 				<div id="parent-<?php the_ID(); ?>" class="home-links">
 
 						<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+						<?php
+							the_post_thumbnail(array(100, 100), array( 'class' => 'small-4 columns' ));
+
+						?>
+						<p class="small-8 columns">
+							<?php
+							the_field('project_description');
+							?>
+							</p>
 
 				</div>
 

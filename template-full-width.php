@@ -29,14 +29,14 @@ Template Name: Full Width (No Sidebar)
 			<?php endwhile; endif; ?>
 
 
-				<aside class="large-6 medium-6 columns" role="complementary">
+				<aside class="large-6 small-12 columns" role="complementary">
 
 				<?php get_template_part( 'parts/loop', 'posts' );
 
 				?>
 				</aside>
 
-				<aside class="large-6 medium-6 columns" role="complementary">
+				<aside class="large-6 small-12 columns" role="complementary">
 
 				<?php get_template_part( 'parts/loop', 'publications' ); ?>
 				</aside>
@@ -52,9 +52,9 @@ Template Name: Full Width (No Sidebar)
 
 	<div class="twitter_wrap large-12 columns">
 
-									<?php 	if ( is_front_page() ) {
-										get_template_part( 'parts/content', 'twitter' );
-									}?>
+	<?php 	if ( is_front_page() ) {
+	get_template_part( 'parts/content', 'twitter' );
+	}?>
 
 		</div>
 

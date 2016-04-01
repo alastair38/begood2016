@@ -20,6 +20,7 @@
 	);
 
 	$lastpublications = get_posts( $args );
+
 	echo '<h5 class="row">Latest Publications</h5>';
 	foreach ( $lastpublications as $post ) :
 		setup_postdata( $post );

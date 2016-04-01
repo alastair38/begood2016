@@ -6,8 +6,8 @@
 
 		 <h3><a href="<?php the_permalink($parentObj->ID) ?>"><?php echo get_the_title($parentObj->ID); ?></a></h3>
 		 <?php
-		 $content = get_the_content();
-		 echo wp_trim_words($content, 5);?>
+		 $content = $parentObj->post_content;
+		 echo wp_trim_words($content, 20);?>
 	 </div>
 
 <?php

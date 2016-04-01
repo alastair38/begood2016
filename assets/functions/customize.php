@@ -43,6 +43,22 @@ $wp_customize->add_control(
         'type'      => 'email'
     )
 );
+$wp_customize->add_setting(
+    'tcx_landline_contact',
+    array(
+        'default'    =>  '0131 333 4444',
+        'sanitize_callback'  => 'tcx_sanitize_text',
+        'transport'  =>  'refresh'
+    )
+);
+$wp_customize->add_control(
+    'tcx_landline_contact',
+    array(
+        'section'   => 'tcx_contact_options',
+        'label'     => 'Landline',
+        'type'      => 'text'
+    )
+);
 $wp_customize->add_section(
     'tcx_logo_options',
     array(
@@ -74,6 +90,7 @@ add_action( 'customize_register', 'tcx_register_theme_customizer' );
 function tcx_sanitize_text ( $input ) {
     return strip_tags( stripslashes( $input ) );
 }
+
 
 /* The following function would hook into wp_head and inject a style block to change the anchor link colours to reflect any value in the options table updated by the tcx_link_color setting
 

@@ -5,9 +5,9 @@
 			<li class="site-text show-for-medium">
 				<?php
 					if ( is_front_page() ) {?>
-				<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";><a href="<?php bloginfo('url');?>"><?php bloginfo('description');?></a></h1>
+				<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";></h1>
 				<?php } else {?>
-					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 70px";><a href="<?php bloginfo('url');?>"><?php bloginfo('description');?></a></h1>
+					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 100px";></h1>
 
 			<?php	}?>
 
@@ -17,7 +17,7 @@
 
 
 			<li class="site-text show-for-small-only">
-			<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 30px";><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
+			<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 50px";><a class="screen-reader-text" href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
 		</li>
 		</ul>
 	</div>

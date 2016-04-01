@@ -5,9 +5,10 @@ function site_scripts() {
     // Load What-Input files in footer
     wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/what-input.min.js', array(), '', true );
 
-    // Load Owl Carousel files in footer
+    // Load Slick JS files in footer - front page only
+    if (is_front_page()) {
     wp_enqueue_script( 'owl-carousel', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery'), '', true );
-
+    }
     wp_enqueue_script( 'mojs', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js', array(), '', true );
 
     // Adding Foundation scripts file in the footer
@@ -25,8 +26,8 @@ function site_scripts() {
 
     wp_enqueue_style( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css');
 
-    // Register main stylesheet
-    wp_enqueue_style( 'owl-css', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css' );
+    // Register Slick stylesheet - has now been added to main scss folder
+    // wp_enqueue_style( 'slick-css', 'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css' );
 
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
@@ -36,4 +37,12 @@ function site_scripts() {
       wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action('wp_enqueue_scripts', 'site_scripts', 999);
+    add_action('wp_enqueue_scripts', 'site_scripts', 999);
+
+    // Remove emoji styles/scripts
+
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
