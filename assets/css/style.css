@@ -4134,21 +4134,21 @@ li.categories {
     color: #fefefe;
     padding: 0 10px; }
 
-.home-links, .about-links {
+.home-links, .about-links, .researcher-links {
   background: #27AAE1;
   margin: 1em 0;
   position: relative;
   text-align: right;
   padding: 0 10px; }
-  .home-links h3, .about-links h3 {
+  .home-links h3, .about-links h3, .researcher-links h3 {
     text-transform: uppercase;
     text-align: right;
     border-bottom: 1px solid #cacaca; }
-    .home-links h3 a, .about-links h3 a {
+    .home-links h3 a, .about-links h3 a, .researcher-links h3 a {
       color: #fefefe; }
-      .home-links h3 a:hover, .home-links h3 a:focus, .about-links h3 a:hover, .about-links h3 a:focus {
+      .home-links h3 a:hover, .home-links h3 a:focus, .about-links h3 a:hover, .about-links h3 a:focus, .researcher-links h3 a:hover, .researcher-links h3 a:focus {
         color: #455A64; }
-  .home-links h3:after, .about-links h3:after {
+  .home-links h3:after, .about-links h3:after, .researcher-links h3:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -4157,7 +4157,7 @@ li.categories {
     text-align: right;
     font-size: .35em;
     color: #212121; }
-  .home-links span, .about-links span {
+  .home-links span, .about-links span, .researcher-links span {
     position: absolute;
     left: 0;
     top: 0;
@@ -4170,16 +4170,27 @@ li.categories {
 .home .home-links {
   height: 200px; }
 
-.home-links {
-  height: 150px; }
-  .home-links p {
+.researcher-links {
+  height: 120px; }
+  @media screen and (min-width: 32em) {
+    .researcher-links {
+      height: 150px; } }
+  .researcher-links h3 {
+    font-size: 1em; }
+    @media screen and (min-width: 32em) {
+      .researcher-links h3 {
+        font-size: 1.25rem; } }
+    @media screen and (min-width: 64em) {
+      .researcher-links h3 {
+        font-size: 1.5rem; } }
+  .researcher-links p {
     text-align: right;
     padding-right: 0;
     font-size: .9rem; }
-    @media screen and (min-width: 32em) {
-      .home-links p {
+    @media screen and (min-width: 64em) {
+      .researcher-links p {
         font-size: 1.3rem; } }
-  .home-links img {
+  .researcher-links img {
     border-radius: 50%; }
 
 .about-links {
@@ -4195,7 +4206,8 @@ li.categories {
 
 .carousel {
   position: relative;
-  height: 200px; }
+  height: 200px;
+  background: teal; }
   @media screen and (min-width: 32em) {
     .carousel {
       height: 300px; } }

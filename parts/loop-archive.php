@@ -6,7 +6,7 @@
 	</header> <!-- end article header -->
 
 	<section class="entry-content" itemprop="articleBody">
-		<?php the_content('<button class="tiny">Read more...</button>'); ?>
+		<?php the_excerpt(); ?>
 	</section> <!-- end article section -->
 
 	<footer class="article-footer">

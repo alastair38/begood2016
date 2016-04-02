@@ -728,7 +728,7 @@ li.categories {
   }
 }
 
-.home-links, .about-links {
+.home-links, .about-links, .researcher-links {
 	background: $highlight-color;
 	margin: 1em 0;
 	position: relative;
@@ -774,13 +774,26 @@ li.categories {
   height: 200px;
 }
 
-.home-links {
-  height: 150px;
+
+.researcher-links {
+  height: 120px;
+  @include breakpoint(medium) {
+    height: 150px;
+  }
+  h3 {
+    font-size: 1em;
+    @include breakpoint(medium) {
+    	font-size: 1.25rem;
+    }
+    @include breakpoint(large) {
+    	font-size: 1.5rem;
+    }
+  }
   p {
     text-align: right;
     padding-right: 0;
     font-size: .9rem;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
     	font-size: 1.3rem;
     }
   }
@@ -807,6 +820,7 @@ li.categories {
 .carousel {
   position: relative;
   height: 200px;
+  background: teal;
   @include breakpoint(medium) {
   height: 300px;
   }
