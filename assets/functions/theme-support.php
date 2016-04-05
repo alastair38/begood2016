@@ -45,8 +45,8 @@ function joints_theme_support() {
 
     if ( $query->is_main_query() && (is_tax('content_type', 'events')) ) {
         $query->set( 'meta_key', 'start_date' );
-        $query->set( 'orderby', 'title meta_value_num' );
-        $query->set( 'order', 'DESC' );
+        $query->set( 'orderby', 'meta_value_num' );
+        $query->set( 'order', 'ASC' );
 
         // //Get events after 24 hours ago
         // $query->set( 'meta_value', $yesterday );
