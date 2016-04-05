@@ -4,10 +4,10 @@
 		<ul class="menu">
 			<li class="site-text show-for-medium">
 				<?php
-					if ( is_front_page() ) {?>
-				<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";></h1>
+					if ( is_page_template( 'page-pojects.php' ) ) {?>
+				<h1 style="background:url(<?php the_post_thumbnail_url( 'full' )?>) no-repeat; background-size: 240px";></h1>
 				<?php } else {?>
-					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 100px";></h1>
+					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";></h1>
 
 			<?php	}?>
 

@@ -15,15 +15,7 @@ jQuery(document).ready(function() {
 	// Adds Flex Video to YouTube and Vimeo Embeds
 	jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').wrap("<div class='flex-video'/>");
 
-  jQuery(window).scroll(function() {
-       var scroll = jQuery(window).scrollTop();
 
-       if (scroll >= 300) {
-           jQuery(".site-text").addClass('smaller');
-       } else {
-           jQuery(".site-text").removeClass("smaller");
-       }
-   });
 
 
 });

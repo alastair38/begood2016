@@ -102,8 +102,8 @@ function add_logout_link( $items, $args )
             // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=resource">Add Resource</a></li>';
             // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">Add News Report</a></li>';
             // $items .= '<li><a href="'. get_edit_user_link() .'">Edit Profile</a></li></ul></li>';
-						$items .= '<li><a href="'. get_post_type_archive_link( 'news' ) .'">News + Events</a></li>';
-						$items .= '<li><a href="'. get_post_type_archive_link( 'resources' ) .'">Resources</a></li>';
+						//$items .= '<li><a href="'. get_post_type_archive_link( 'news' ) .'">News + Events</a></li>';
+						//$items .= '<li><a href="'. get_post_type_archive_link( 'resources' ) .'">Ress</a></li>';
         }
     }
     return $items;

@@ -1,4 +1,4 @@
-<div class="latest_pubs">
+<div class="latest_pubs columns">
 
 	<?php
 	if (is_front_page()) {
@@ -8,12 +8,12 @@
 	}
 	$args = array(
 		'posts_per_page' => $post_per_page,
-		'post_type' => 'resource',
+		'post_type' => 'resources',
 		'tax_query' => array(
 				array(
 					'taxonomy' => 'resource_cat',
 					'field' => 'slug',
-					'terms' => 'publication'
+					'terms' => 'publications'
 				)
 	),
 		'order' => DESC

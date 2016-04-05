@@ -3,10 +3,7 @@
 	<header class="article-headercolumns">
 		<?php edit_post_link('Edit Page', '<span class="edit_link wave-effect waves-light">', '</span>'); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
-		<?php $description = get_field('project_description');
-		if($description){
-			echo '<h4>' . $description . '</h4>';
-		}?>
+	
 		<?php
 		if ( is_front_page() ) {?>
 		<span class="front label"><?php bloginfo('description');?></span>
@@ -15,7 +12,12 @@
 
 
     <section class="entry-content" itemprop="articleBody">
-	    <?php the_content(); ?>
+			<?php
+			if ( is_page_template( 'page-projects.php' )) {
+				 the_post_thumbnail('medium');
+
+			}
+	     the_content(); ?>
 	    <?php wp_link_pages(); ?>
 	</section> <!-- end article section -->
 

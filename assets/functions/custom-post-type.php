@@ -144,7 +144,7 @@ function custom_post_example() {
 					'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
 					'menu_icon' => 'dashicons-media-document', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
 					'rewrite'	=> array( 'slug' => 'news_and_events', 'with_front' => false ), /* you can specify its url slug */
-					'has_archive' => 'news_and_events', /* you can rename the slug here */
+					'has_archive' => false, /* you can rename the slug here */
 					'capability_type' => 'post',
 					'hierarchical' => false,
 					/* the next one is important, it tells what's enabled in the post editor */

@@ -1,11 +1,12 @@
 <?php
-     // if outside the loop
-		// This is a parent so we'll loop through the child pages
+$page = get_page_by_path( 'about' );
+
+		// outside loop and need to get child pages (researchers of 'about')
 
 $args = array(
 		'post_type'      => 'page',
 		'posts_per_page' => -1,
-		'post_parent'    => $post->ID,
+		'post_parent'    => $page->ID,
 		'order'          => 'ASC',
 		'orderby'        => 'menu_order'
  );

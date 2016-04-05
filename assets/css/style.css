@@ -3679,10 +3679,10 @@ GENERAL STYLES
   background: #ec5840; }
 
 #cookie-bar .cb-policy {
-  background: #27AAE1; }
+  background: #1f88b4; }
 
 #cookie-bar .cb-policy:hover {
-  background: #27AAE1; }
+  background: #1f88b4; }
 
 /*********************
 Scroll to top button
@@ -3706,7 +3706,7 @@ Scroll to top button
   z-index: 11; }
 
 button.scrollToTop:hover, button.scrollToTop:focus {
-  color: #27AAE1;
+  color: #1f88b4;
   background: transparent !important;
   outline: none; }
 
@@ -3733,11 +3733,11 @@ button.scrollToTop:hover + #scrollAlert {
 LINK STYLES
 *********************/
 a {
-  color: #27AAE1;
+  color: #1f88b4;
   transition: color ease 500ms; }
 
 .menu-text a {
-  color: #27AAE1; }
+  color: #1f88b4; }
 
 a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
@@ -3801,35 +3801,35 @@ HEADER STYLES
   .site-text h1 a {
     color: #455A64; }
     .site-text h1 a:hover, .site-text h1 a:focus {
-      color: #27AAE1; }
+      color: #1f88b4; }
 
-.home .site-text h1 {
+.site-text h1 {
   font-size: 1.5rem;
   text-align: left;
-  background-position: left;
-  background-size: 26px;
+  background-position: left center;
+  background-size: cover;
   transition: all 0.6s; }
   @media screen and (min-width: 32em) {
-    .home .site-text h1 {
+    .site-text h1 {
       text-align: center;
       padding: 2em 1em 1em 4em;
-      background-size: 100px !important;
+      background-size: cover;
       margin-top: -.1em; } }
   @media screen and (min-width: 64em) {
-    .home .site-text h1 {
+    .site-text h1 {
       text-align: center;
-      background-size: 250px !important;
+      background-size: cover;
       padding: 3.5em 0 3.5em 12em;
       margin-top: -.1em; } }
-  .home .site-text h1 a {
+  .site-text h1 a {
     color: #455A64;
     -webkit-animation: show 500ms 1;
     /* Safari 4+ */
     animation: show 2000ms 1;
     -moz-animation: show 500ms 1;
     -o-animation: show 500ms 1; }
-    .home .site-text h1 a:hover, .home .site-text h1 a:focus {
-      color: #27AAE1; }
+    .site-text h1 a:hover, .site-text h1 a:focus {
+      color: #1f88b4; }
 
 .home .site-text.smaller h1 {
   text-align: left;
@@ -3846,7 +3846,7 @@ HEADER STYLES
   .home .site-text.smaller h1 a {
     color: #455A64; }
     .home .site-text.smaller h1 a:hover, .home .site-text.smaller h1 a:focus {
-      color: #27AAE1; }
+      color: #1f88b4; }
 
 /*********************
 NAVIGATION STYLES
@@ -3879,17 +3879,17 @@ li.menu-item.current-menu-item a {
   @media screen and (min-width: 64em) {
     li.menu-item.current-menu-item a {
       background: transparent;
-      border-bottom: 1px solid #27AAE1; } }
+      border-bottom: 1px solid #1f88b4; } }
 
 li#login {
-  border: 1px solid #27AAE1;
+  border: 1px solid #1f88b4;
   border-radius: 2px; }
   li#login:hover {
-    background: #27AAE1; }
+    background: #1f88b4; }
     li#login:hover a {
       color: #fefefe; }
   li#login a {
-    color: #27AAE1; }
+    color: #1f88b4; }
 
 li#logout {
   border: 1px solid #ec5840;
@@ -3943,10 +3943,10 @@ img {
     #content {
       padding-top: 10em; } }
   #content #inner-content {
-    padding: 1rem 0rem; }
+    padding: 2rem 0rem; }
 
 @media screen and (min-width: 64em) {
-  .home #content {
+  #content {
     padding-top: 15em; } }
 
 .events .callout {
@@ -3992,7 +3992,7 @@ img {
 
 .single-title,
 .page-title {
-  font-size: 2.5rem; }
+  font-size: 2.25rem; }
 
 .page-title {
   border-bottom: 1px solid #e6e6e6;
@@ -4021,6 +4021,9 @@ i.fa.fa-external-link {
   padding-bottom: 1em;
   margin-bottom: 0em; }
 
+.home #main {
+  min-height: auto; }
+
 .home article h1 {
   color: #455A64; }
   @media screen and (min-width: 64em) {
@@ -4030,7 +4033,7 @@ i.fa.fa-external-link {
 
 .home .entry-content {
   padding-top: 2em;
-  padding-bottom: 3em; }
+  padding-bottom: 1em; }
 
 .home .article-header {
   background: #e6e6e6;
@@ -4046,15 +4049,18 @@ i.fa.fa-external-link {
     color: #455A64;
     background: #e6e6e6; }
 
+.home aside.large-12.medium-12.columns {
+  margin-bottom: 2em; }
+
 .edit_link a {
   color: #fefefe;
-  background: #27AAE1;
+  background: #1f88b4;
   border-radius: 2px;
   display: inline;
   padding: 2px 5px;
   transition: 350ms; }
   .edit_link a:hover, .edit_link a:focus {
-    background: #126182; }
+    background: #114c65; }
 
 @media screen and (min-width: 64em) {
   .home .entry-content {
@@ -4149,7 +4155,7 @@ i.fa.fa-external-link {
     padding: 0 10px; }
 
 .home-links, .about-links, .researcher-links {
-  background: #27AAE1;
+  background: #1f88b4;
   margin: 1em 0;
   position: relative;
   text-align: right;
@@ -4257,7 +4263,7 @@ button.slick-next.slick-arrow {
   button.slick-next.slick-arrow:hover {
     background: rgba(0, 0, 0, 0.15); }
   button.slick-next.slick-arrow .fa {
-    color: #27AAE1;
+    color: #1f88b4;
     font-size: 2em;
     margin: auto;
     padding: 0 5px; }
@@ -4276,7 +4282,7 @@ button.slick-prev.slick-arrow {
   button.slick-prev.slick-arrow:hover {
     background: rgba(0, 0, 0, 0.15); }
   button.slick-prev.slick-arrow .fa {
-    color: #27AAE1;
+    color: #1f88b4;
     font-size: 2em;
     margin: auto;
     padding: 0 5px; }
@@ -4344,7 +4350,7 @@ CAROUSEL STYLES
   background: #e6e6e6; }
 
 .slick-dots li.slick-active button {
-  background: #27AAE1; }
+  background: #1f88b4; }
 
 /*********************
 IMAGE GALLERY STYLES

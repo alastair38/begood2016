@@ -1,4 +1,4 @@
-<div class="latest_posts">
+<div class="latest_posts columns">
 
 	<?php
 	$args = array(

@@ -1,4 +1,4 @@
-<div class="latest_pubs">
+<div class="latest_pubs columns">
 
 	<?php
 	if (is_front_page()) {

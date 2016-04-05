@@ -6,7 +6,7 @@
 	</a>
 	<ul>
       <?php echo '<li class="red waves-effect"><a href="' . admin_url() . 'post-new.php">Add Blog Post</a></li>
-			<li class="red waves-effect"><a href="' . admin_url() . 'post-new.php?post_type=resource">Add Resource</a></li>
+			<li class="red waves-effect"><a href="' . admin_url() . 'post-new.php?post_type=resources">Add Resource</a></li>
 			<li class="red waves-effect"><a href="' . admin_url() . 'post-new.php?post_type=news">Add News/Event</a></li>';
 			?>
   </ul>
