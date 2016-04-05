@@ -5,17 +5,7 @@
 		<div id="inner-content" class="row">
 
 		    <main id="main" class="large-8 medium-8 columns" role="main">
-
-					<?php
-					if ( is_front_page() && is_home() ) {
-						// Default homepage
-					} elseif ( is_front_page() ) {
-						// static homepage
-					} elseif ( is_home() ) {
-						echo '<h1 class="page-title">Blog</h1>';
-					} else {
-						//everything else
-					}?>
+					<h1 class="page-title">News + Events</h1>
 
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

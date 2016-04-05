@@ -20,20 +20,44 @@ $html = '<div class="latest_posts"><h5>Blog Categories</h5>';
 foreach ( $tags as $tag ) {
 $tag_link = get_tag_link( $tag->term_id );
 
-$html .= "<a href='{$tag_link}' title='View all content assigned to {$tag->name}' class='{$tag->slug}'>";
-$html .= "{$tag->name}</a> <span>[{$tag->count}]</span>";
+$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$tag->name}' class='{$tag->slug}'>";
+$html .= "{$tag->name}</a> <span>[{$tag->count}]</span></h6>";
 }
 $html .= '</div>';
 echo $html;
 
-} else if (is_page('resources')){
+} else if ( is_post_type_archive('news') || is_singular('news') || is_tax('content_type') ) {
+
+echo '<aside class="columns" role="complementary">';
+
+	$terms = get_terms('content_type');
+	$html = '<div class="latest_posts"><h5>Filter News/Events</h5>';
+	foreach ( $terms as $term ) {
+	$tag_link = get_tag_link( $term->term_id );
+
+	$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
+	$html .= "{$term->name}</a> <span>[{$term->count}]</span></h6>";
+	}
+	$html .= '</div>';
+	echo $html;
+	echo '</aside>';
+
+
+}  else if ( is_post_type_archive('resources') || is_singular('resources') || is_tax('resource_cat')) {
 
 	echo '<aside class="columns" role="complementary">';
+	$terms = get_terms('resource_cat');
+	$html = '<div class="latest_posts"><h5>Filter Resources</h5>';
+	foreach ( $terms as $term ) {
+	$tag_link = get_tag_link( $term->term_id );
 
-		get_template_part( 'parts/loop', 'resource-publications' );
-
-		echo '</aside>';
-}  else {
+	$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
+	$html .= "{$term->name}</a> <span>[{$term->count}]</span></h6>";
+	}
+	$html .= '</div>';
+	echo $html;
+	echo '</aside>';
+} else {
 	//get_template_part( 'parts/loop', 'posts' );
 }
 

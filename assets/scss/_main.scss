@@ -225,6 +225,10 @@ h5, .h5 {
 
 }
 
+.archive h2, .blog h2 {
+  font-size: 1.9375rem;
+}
+
 /*********************
 HEADER STYLES
 *********************/
@@ -547,7 +551,7 @@ img {
 
 .single-title,
 .page-title {
-
+    font-size: 2.5rem;
 }
 
 .single-title {
@@ -555,6 +559,8 @@ img {
 }
 
 .page-title {
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 2rem;
 
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
@@ -584,7 +590,12 @@ li.categories {
 	time {}
 }
 
+i.fa.fa-external-link {
+  padding: 0px 5px;
+}
+
 #main {
+    min-height: 60vh;
 		padding-bottom: 1em;
 		margin-bottom: 0em;
 }

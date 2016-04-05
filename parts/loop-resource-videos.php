@@ -3,7 +3,7 @@
 	<?php
 	$args = array(
 		'posts_per_page' => 12,
-		'post_type' => 'resource',
+		'post_type' => 'resources',
 		'tax_query' => array(
 				array(
 					'taxonomy' => 'resource_cat',
@@ -15,7 +15,9 @@
 	);
 
 	$lastvideos = get_posts( $args );
-	echo '<h5>Latest Videos</h5>';
+	if($lastvideos){
+		echo '<h5>Latest Videos</h5>';
+	}
 	foreach ( $lastvideos as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -23,7 +25,7 @@
 	// // this should only show an event if the event_date is either today or in the future
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
-	<article class="large-3 medium-4 small-6 columns">
+	<article class="large-3 medium-4 small-6 columns end">
 		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 		 <p class="byline">
 		 	Published <time
