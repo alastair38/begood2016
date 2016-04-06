@@ -3755,12 +3755,9 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 HEADER STYLES
 *********************/
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0px;
   box-shadow: 1px 1px 3px 0px #e6e6e6;
-  z-index: 100; }
+  z-index: 100;
+  background: #f6f6f6; }
   .header ul.off-canvas-list li {
     list-style: none; }
 
@@ -3911,20 +3908,8 @@ img {
   -moz-animation: show 2000ms 1;
   -o-animation: show 2000ms 1; }
 
-#content {
-  padding-top: 6em; }
-  @media screen and (min-width: 32em) {
-    #content {
-      padding-top: 7em; } }
-  @media screen and (min-width: 64em) {
-    #content {
-      padding-top: 10em; } }
-  #content #inner-content {
-    padding: 2rem 0rem; }
-
-@media screen and (min-width: 64em) {
-  #content {
-    padding-top: 16em; } }
+#content #inner-content {
+  padding: 2rem 0rem; }
 
 .events .callout {
   margin-top: 2em;

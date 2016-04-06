@@ -233,10 +233,6 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0px;
     // background: -moz-linear-gradient(45deg, $white 0%, $white 50%, $light-gray 50%, $light-gray 100%); /* ff3.6+ */
     // background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, $white), color-stop(50%,  $white), color-stop(50%, $light-gray), color-stop(100%, $light-gray)); /* safari4+,chrome */
     // background: -webkit-linear-gradient(45deg, $white 0%, $white 50%, $light-gray 50%, $light-gray 100%); /* safari5.1+,chrome10+ */
@@ -246,6 +242,7 @@ HEADER STYLES
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */
 	box-shadow: 1px 1px 3px 0px $light-gray;
 	z-index: 100;
+  background: #f6f6f6;
 
 	ul.off-canvas-list li {
 		list-style: none;
@@ -442,12 +439,11 @@ img {
 }
 
 #content {
-	padding-top: 6em;
+
 	@include breakpoint(medium) {
-		padding-top: 7em;
 	}
 	@include breakpoint(large) {
-		padding-top: 10em;
+
 	}
 	#inner-content {
 		padding: 2rem 0rem;
@@ -456,7 +452,6 @@ img {
 
  #content {
   @include breakpoint(large) {
-		padding-top: 16em;
 	}
 }
 

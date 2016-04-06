@@ -1,4 +1,5 @@
-<div class="top-bar" id="top-bar-menu">
+<div data-sticky-container>
+<div class="top-bar sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" style="width:100%"  id="top-bar-menu">
 
 	<div class="top-bar-left float-left">
 		<ul class="menu">
@@ -27,7 +28,7 @@
 		<?php joints_top_nav(); ?>
 	</div>
 
-	<?php get_template_part( 'parts/content', 'edit' ); ?>
+	<?php //get_template_part( 'parts/content', 'edit' ); ?>
 
 	<!-- <span class="top-bar-right large-2 large-offset-10 funders show-for-large">
 
@@ -50,4 +51,5 @@
 			<li class="menu-button"><a data-toggle="off-canvas">MENU</a></li>
 		</ul>
 	</div>
+</div>
 </div>
