@@ -2,12 +2,24 @@
 
 	<div class="top-bar-left float-left">
 		<ul class="menu">
-			<li class="site-text show-for-medium">
+			<li class="site-text show-for-large">
 				<?php
-					if ( is_page_template( 'page-pojects.php' ) ) {?>
-				<h1 style="background:url(<?php the_post_thumbnail_url( 'full' )?>) no-repeat; background-size: 240px";></h1>
+					if ( is_page_template( 'page-projects.php' ) && !is_page( 'affiliated-projects' ) ) {?>
+				<h1 style="background:url(<?php the_post_thumbnail_url( 'full' )?>) no-repeat; background-size: 250px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
 				<?php } else {?>
-					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";></h1>
+					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 250px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
+
+			<?php	}?>
+
+
+			</li>
+
+			<li class="site-text show-for-medium-only">
+				<?php
+					if ( is_page_template( 'page-projects.php' ) && !is_page( 'affiliated-projects' ) ) {?>
+				<h1 style="background:url(<?php the_post_thumbnail_url( 'full' )?>) no-repeat; background-size: 100px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
+				<?php } else {?>
+					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 100px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
 
 			<?php	}?>
 
@@ -15,9 +27,15 @@
 			</li>
 
 
-
 			<li class="site-text show-for-small-only">
-			<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 50px";><a class="screen-reader-text" href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
+				<?php
+					if ( is_page_template( 'page-projects.php' ) && !is_page( 'affiliated-projects' ) ) {?>
+				<h1 style="background:url(<?php the_post_thumbnail_url( 'full' )?>) no-repeat; background-size: 50px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
+				<?php } else {?>
+					<h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: 50px";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1>
+
+			<?php	}?>
+
 		</li>
 		</ul>
 	</div>

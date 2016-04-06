@@ -15,7 +15,7 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 } else if ( is_page_template( 'page-projects.php' ) ) {
 		 get_template_part( 'parts/loop', 'researcher-links' );
 
-} else if ( is_home()) {
+} else if ( is_home() || is_tag()) {
 
 	$tags = get_tags();
 $html = '<aside class="columns" role="complementary"><div class="latest_posts"><h5>Blog Categories</h5>';
@@ -59,8 +59,10 @@ echo '<aside class="columns" role="complementary">';
 	$html .= '</div>';
 	echo $html;
 	echo '</aside>';
+} else if (is_author()) {
+	get_template_part( 'parts/loop', 'researcher-links' );
 } else {
-	//get_template_part( 'parts/loop', 'posts' );
+	get_template_part( 'parts/loop', 'posts' );
 }
 
 ?>

@@ -10,11 +10,23 @@
 		    		<h1 class="page-title"><?php single_term_title();?></h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
-					<?php } else {?>
+					<?php } else if (is_tag()) {?>
 						<header>
-			    		<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
+			    		<h1 class="page-title">Posts tagged: <?php single_tag_title(); ?></h1>
 						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 			    	</header>
+					<?php } else if (is_author()) {
+						$curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+						?>
+						<header>
+			    		<h1 class="page-title"><?php echo $curauth->display_name . '\'s Content'; ?></h1>
+						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
+			    	</header>
+					<?php } else {?>
+						<header>
+							<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
+						<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
+						</header>
 					<?php }?>
 
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

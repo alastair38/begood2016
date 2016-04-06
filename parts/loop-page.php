@@ -3,7 +3,7 @@
 	<header class="article-headercolumns">
 		<?php edit_post_link('Edit Page', '<span class="edit_link wave-effect waves-light">', '</span>'); ?>
 		<h1 class="page-title"><?php the_title(); ?></h1>
-	
+
 		<?php
 		if ( is_front_page() ) {?>
 		<span class="front label"><?php bloginfo('description');?></span>
@@ -14,7 +14,7 @@
     <section class="entry-content" itemprop="articleBody">
 			<?php
 			if ( is_page_template( 'page-projects.php' )) {
-				 the_post_thumbnail('medium');
+				// the_post_thumbnail('medium');
 
 			}
 	     the_content(); ?>
