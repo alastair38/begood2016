@@ -633,6 +633,14 @@ i.fa.fa-external-link {
     }
   }
 
+.entry-content ul {
+  margin-left: 0;
+  li {
+    padding: .5em 1em;
+  }
+}
+
+
 .page-template-page-projects .entry-content,
 .page-template-default .entry-content {
   padding: 0;
