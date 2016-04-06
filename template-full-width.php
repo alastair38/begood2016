@@ -21,9 +21,7 @@ Template Name: Full Width (No Sidebar)
 					<section class="entry-content large-12 columns" itemprop="articleBody">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
-						<img class="large-3 small-6 columns" src="<?php echo get_template_directory_uri() . '/assets/images/University_of_Oxford.png';?>">
-
-						<img class="large-3 small-6 columns" src="<?php echo get_template_directory_uri() . '/assets/images/wellcome_trust.jpg';?>">
+					
 				</section> <!-- end article section -->
 
 			<?php endwhile; endif; ?>

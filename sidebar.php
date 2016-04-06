@@ -3,7 +3,7 @@
 	<?php
 	global $post;
 
-if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researchers.php' ) ) {
+if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researchers.php' ) || is_page('contact') && has_post_thumbnail() ) {
 	the_post_thumbnail('large');
 }
  	$children = get_pages( array( 'child_of' => $post->ID ) );
@@ -62,7 +62,7 @@ echo '<aside class="columns" role="complementary">';
 } else if (is_author()) {
 	get_template_part( 'parts/loop', 'researcher-links' );
 } else {
-	get_template_part( 'parts/loop', 'posts' );
+	// get_template_part( 'parts/loop', 'posts' );
 }
 
 ?>

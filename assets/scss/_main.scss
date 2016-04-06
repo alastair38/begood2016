@@ -246,10 +246,7 @@ HEADER STYLES
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */
 	box-shadow: 1px 1px 3px 0px $light-gray;
 	z-index: 100;
-  -webkit-animation: show 1000ms 1; /* Safari 4+ */
-  animation: show 1000ms 1;
-  -moz-animation: show 1000ms 1;
-  -o-animation: show 1000ms 1;
+
 	ul.off-canvas-list li {
 		list-style: none;
 	}
@@ -260,35 +257,33 @@ HEADER STYLES
   margin: 0 10px;
 }
 
-.header ~ .site-text.smaller {
-
-}
-
-.home .header {
+.funders {
   -webkit-animation: show 0ms 1; /* Safari 4+ */
   animation: show 0ms 1;
   -moz-animation: show 0ms 1;
   -o-animation: show 0ms 1;
 }
 
-.funders {
-  -webkit-animation: show 0ms 1; /* Safari 4+ */
-  animation: show 2000ms 1;
-  -moz-animation: show 0ms 1;
-  -o-animation: show 0ms 1;
-}
-
 .site-text h1 {
   font-size: 1.5rem;
 	text-align: left;
-  padding: .75em 1.5em .75em 1.5em;
+  padding: 1em 1.5em 1em 1.5em;
 	margin-top: .25em;
 	background-position: left;
-@include breakpoint(medium) {
-	text-align: center;
-  padding: 2em 1em 1em 4em;
-	margin-top: -.1em;
-}
+  -webkit-animation: show 1000ms 1; /* Safari 4+ */
+  animation: show 1000ms 1;
+  -moz-animation: show 1000ms 1;
+  -o-animation: show 1000ms 1;
+  @include breakpoint(medium) {
+  	text-align: center;
+    padding: 2em 1em 1em 4em;
+  	margin-top: -.1em;
+  }
+  @include breakpoint(large) {
+  	text-align: center;
+    padding: 3.5em 0 3.5em 12em;
+  	margin-top: -.1em;
+  }
 	a {
 			color: $primary-color;
 			&:hover, &:focus {
@@ -298,40 +293,6 @@ HEADER STYLES
 
 }
 
-.site-text h1 {
-  font-size: 1.5rem;
-	text-align: left;
-	background-position: left center;
-	background-size: cover;
-  -webkit-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    -ms-transition: all 0.6s;
-    -o-transition: all 0.6s;
-    transition: all 0.6s;
-    @include breakpoint(medium) {
-    	text-align: center;
-      padding: 2em 1em 1em 4em;
-    	background-size: cover;
-    	margin-top: -.1em;
-    }
-@include breakpoint(large) {
-	text-align: center;
-  background-size: cover;
-  padding: 3.5em 0 3.5em 12em;
-	margin-top: -.1em;
-}
-	a {
-			color: $primary-color;
-      -webkit-animation: show 500ms 1; /* Safari 4+ */
-      animation: show 2000ms 1;
-      -moz-animation: show 500ms 1;
-      -o-animation: show 500ms 1;
-			&:hover, &:focus {
-				color: $highlight-color;
-			}
-	}
-
-}
 
 .home .site-text.smaller h1 {
 
@@ -380,6 +341,11 @@ NAVIGATION STYLES
 	}
 }
 
+.top-bar-right img {
+  margin-top: 59px;
+  height: 49px;
+  padding-left: 10px;
+}
 
 li.menu-item a:hover, li.menu-item a:focus {
 	text-decoration: underline;
@@ -434,6 +400,9 @@ li.menu-button {
 .off-canvas {
   background: $dark-gray;
   min-height: 100%;
+  img {
+    padding-top: 1em;
+  }
   a {
     color: $white;
   }
@@ -473,9 +442,9 @@ img {
 }
 
 #content {
-	padding-top: 4em;
+	padding-top: 6em;
 	@include breakpoint(medium) {
-		padding-top: 5em;
+		padding-top: 7em;
 	}
 	@include breakpoint(large) {
 		padding-top: 10em;
@@ -487,7 +456,7 @@ img {
 
  #content {
   @include breakpoint(large) {
-		padding-top: 15em;
+		padding-top: 16em;
 	}
 }
 
@@ -560,13 +529,15 @@ img {
 
 .page-title {
   border-bottom: 1px solid $light-gray;
-  margin-bottom: 2rem;
-
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
 		border: 0px;
 		padding: 0px;
 	}
+}
+
+.page .entry-content {
+  margin-top: 2rem;
 }
 
 .archive-title {
@@ -615,8 +586,10 @@ i.fa.fa-external-link {
 }
 
 .home .entry-content {
-  padding-top: 2em;
-  padding-bottom: 1em;
+  @include breakpoint(medium) {
+    padding-top: 1em;
+    padding-bottom: 1em;
+	}
 }
 
 .home .article-header {

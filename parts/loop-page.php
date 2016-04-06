@@ -5,19 +5,21 @@
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
 		<?php
-		if ( is_front_page() ) {?>
-		<span class="front label"><?php bloginfo('description');?></span>
-	<?php } else {}?>
+		$qualifications = get_field('qualifications');
+		if ( $qualifications ) {
+			echo '<strong>' . $qualifications . '</strong>';
+	}?>
 	</header> <!-- end article header -->
 
 
     <section class="entry-content" itemprop="articleBody">
 			<?php
-			if ( is_page_template( 'page-projects.php' )) {
-				// the_post_thumbnail('medium');
-
-			}
 	     the_content(); ?>
+			 <?php
+			 if ( get_field('publications')) {
+				 echo '<h4>Publications</h4>';
+				 the_field('publications');
+		 }?>
 	    <?php wp_link_pages(); ?>
 	</section> <!-- end article section -->
 
