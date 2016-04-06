@@ -1,6 +1,8 @@
 
 					<footer class="footer" role="contentinfo">
 
+							<?php get_template_part( 'parts/content', 'edit' ); ?>
+
 						<div id="inner-footer" class="row">
 
 							<p class="source-org copyright columns">&copy; <?php echo date('Y'); ?>  <?php bloginfo('name'); ?>
