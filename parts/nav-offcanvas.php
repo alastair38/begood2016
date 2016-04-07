@@ -1,5 +1,4 @@
 <div class="top-bar" id="top-bar-menu">
-
 	<div class="top-bar-left float-left">
 		<ul class="menu">
 			<li class="site-text">
@@ -21,9 +20,9 @@
 		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/wellcome_trust.jpg';?>">
 		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/University_of_Oxford.png';?>">
 
-		<?php //joints_footer_links(); ?>
+		<?php joints_footer_links(); ?>
 	</div>
-	<div class="top-bar main-menu columns show-for-large">
+	<div class="main-menu large-12 columns show-for-large">
 		<?php joints_top_nav(); ?>
 	</div>
 

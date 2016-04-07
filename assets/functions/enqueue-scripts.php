@@ -2,13 +2,14 @@
 function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
+  // Adding Foundation scripts file in the footer
+  wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.js', array( 'jquery' ), '6.2', true );
+
+
     // Load What-Input files in footer
     wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/what-input.min.js', array(), '', true );
 
     wp_enqueue_script( 'mojs', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js', array(), '', true );
-
-    // Adding Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.js', array( 'jquery' ), '6.0', true );
 
 
     // Load Slick JS files in footer - front page only
@@ -22,6 +23,7 @@ function site_scripts() {
 
     // Adding Cookie scripts file in the footer
     wp_enqueue_script( 'cookie-js', get_template_directory_uri() . '/assets/js/cookie.js', array( 'jquery' ), '', true );
+
 
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );

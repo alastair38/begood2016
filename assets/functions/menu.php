@@ -11,8 +11,8 @@ register_nav_menus(
 function joints_top_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
-        'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
-        'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
+        'menu_class' => 'dropdown menu',       // Adding custom nav class
+        'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
         'theme_location' => 'main-nav',        			// Where it's located in the theme
         'depth' => 5,                                   // Limit the depth of the nav
         'fallback_cb' => false,                         // Fallback function (see below)
@@ -69,17 +69,15 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
+
 add_filter( 'wp_nav_menu_items', 'add_login_link', 10, 2);
 /**
  * Add a login/logout link, edit profile and add new articles etc links for logged in users
  */
 function add_login_link( $items, $args )
 {
-    if($args->theme_location == 'footer-links')
+    if($args->theme_location == 'main-nav')
     {
-			$items .= '<li class="show-for-large"><a href="https://twitter.com/' . get_theme_mod( 'tcx_twitter_handle' ) . '" target="_blank">Follow us <i class="fa fa-twitter"></i></a></li>';
-			$items .= '<li class="show-for-large"><a href="mailto:' . get_theme_mod( 'tcx_email_contact' ) . '" target="_blank">Email <i class="fa fa-envelope-square"></i></a></li>';
-
         if (!is_user_logged_in())
         {
             $items .= '<li id="login" class="waves-effect waves-light"><a href="'. wp_login_url() .'"><i class="fa fa-sign-in"></i> Log In</a></li>';
@@ -87,33 +85,13 @@ function add_login_link( $items, $args )
     }
     return $items;
 }
-add_filter( 'wp_nav_menu_items', 'add_logout_link', 10, 2);
-/**
- * Add a logout link, edit profile and add new articles etc links for logged in users
- */
-function add_logout_link( $items, $args )
-{
-    if($args->theme_location == 'main-nav')
-    {
-        if ( is_user_logged_in())
-        {
-						// $items .= '<li class="has-submenu is-dropdown-submenu-parent"><a href="#">Add Content</a><ul class="menu submenu is-dropdown-submenu first-sub vertical">';
-            // $items .= '<li><a href="' . admin_url() . 'post-new.php">Add Blog Post</a></li>';
-            // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=resource">Add Resource</a></li>';
-            // $items .= '<li><a href="' . admin_url() . 'post-new.php?post_type=news">Add News Report</a></li>';
-            // $items .= '<li><a href="'. get_edit_user_link() .'">Edit Profile</a></li></ul></li>';
-						//$items .= '<li><a href="'. get_post_type_archive_link( 'news' ) .'">News + Events</a></li>';
-						//$items .= '<li><a href="'. get_post_type_archive_link( 'resources' ) .'">Ress</a></li>';
-        }
-    }
-    return $items;
-}
+
 
 add_filter( 'wp_nav_menu_items', 'add_social_links', 10, 2);
 
 function add_social_links( $items, $args )
 {
-    if($args->theme_location == 'footer-links')
+    if($args->theme_location == 'main-nav')
     {
         if ( is_user_logged_in())
         {

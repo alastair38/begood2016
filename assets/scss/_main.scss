@@ -27,26 +27,6 @@ ANIMATION
   100% { opacity: 1; }
 }
 
-@-webkit-keyframes shrink {
-  0%   {
-  background-size: 250px; }
-  100% {
-  background-size: 26px; }
-}
-@-moz-keyframes shrink {
-  0%   {   background-size: 250px; }
-    100% { ;
-    background-size: 26px;
-}
-}
-@keyframes shrink {
-  0%   {
-  background-size: 250px;
-padding: 3.5em 0 3.5em 6.5em;}
-  100% {
-  background-size: 70px;
-padding: .5em 1em .5em 2em; }
-}
 
 @-webkit-keyframes ripple {
     100% {opacity: 0; -webkit-transform: scale(2.5);}
@@ -232,6 +212,10 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+
+.off-canvas-content {
+  box-shadow: none !important;
+}
 .header {
   position: fixed;
   top: 0;
@@ -311,25 +295,38 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
 	width: 100%;
-	.title-area {
-		z-index: 1;
-	}
 	.main-menu {
     &.columns.show-for-large {
-      padding-bottom: 0;
+
     }
-		ul{
-			display: inline-table;
-			width: 100%;
-      text-align: center;
-		}
 	}
 }
+
+
+ul#menu-main-1 {
+  display: inline-table;
+  text-align: center;
+  width: 100%;
+  -webkit-animation: show 00ms 1; /* Safari 4+ */
+  animation: show 1500ms 1;
+  -moz-animation: show 00ms 1;
+  -o-animation: show 00ms 1;
+  li {
+    ul {
+      width: 100%;
+    }
+  }
+}
+
 
 .top-bar-right img {
   margin-top: 59px;
   height: 49px;
   padding-left: 10px;
+}
+
+li.menu-item a {
+  border: 1px solid transparent;
 }
 
 li.menu-item a:hover, li.menu-item a:focus {
@@ -347,27 +344,10 @@ li.menu-item.current-menu-item a {
   }
 }
 
-li#login {
-  border: 1px solid $highlight-color;
-  border-radius: 2px;
-  &:hover {
-    background: $highlight-color;
-    a {
-      color: $white;
-    }
-  }
-  a {
-    color: $highlight-color;
-  }
-}
-
 li#logout {
-  border: 1px solid $alert-color;
-  border-radius: 2px;
-  &:hover {
-    background: $alert-color;
+  &:hover, &:focus {
     a {
-      color: $white;
+      color: $dark-gray;
     }
   }
   a {
@@ -418,10 +398,6 @@ li.menu-button {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
-img {
-
-}
 
 #content {
   margin-top: 6em;
@@ -802,10 +778,6 @@ i.fa.fa-external-link {
   position: relative;
   height: 200px;
   background: teal;
-  -webkit-animation: show 4000ms 1; /* Safari 4+ */
-  animation: show 4000ms 1;
-  -moz-animation: show 4000ms 1;
-  -o-animation: show 4000ms 1;
   @include breakpoint(medium) {
   height: 300px;
   }
