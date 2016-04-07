@@ -1,5 +1,4 @@
-<div data-sticky-container>
-<div class="top-bar sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" style="width:100%"  id="top-bar-menu">
+<div class="top-bar" id="top-bar-menu">
 
 	<div class="top-bar-left float-left">
 		<ul class="menu">
@@ -49,5 +48,4 @@
 			<li class="menu-button"><a data-toggle="off-canvas">MENU</a></li>
 		</ul>
 	</div>
-</div>
 </div>

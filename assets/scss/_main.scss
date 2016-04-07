@@ -233,6 +233,10 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
     // background: -moz-linear-gradient(45deg, $white 0%, $white 50%, $light-gray 50%, $light-gray 100%); /* ff3.6+ */
     // background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, $white), color-stop(50%,  $white), color-stop(50%, $light-gray), color-stop(100%, $light-gray)); /* safari4+,chrome */
     // background: -webkit-linear-gradient(45deg, $white 0%, $white 50%, $light-gray 50%, $light-gray 100%); /* safari5.1+,chrome10+ */
@@ -240,7 +244,6 @@ HEADER STYLES
     // background: -ms-linear-gradient(45deg, $white 0%, $white 49%, $light-gray 50%, $light-gray 100%); /* ie10+ */
     // background: linear-gradient(180deg, $white 0%, $white 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 100%); /* w3c */
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */
-	box-shadow: 1px 1px 3px 0px $light-gray;
 	z-index: 100;
   background: #f6f6f6;
 
@@ -254,23 +257,12 @@ HEADER STYLES
   margin: 0 10px;
 }
 
-.funders {
-  -webkit-animation: show 0ms 1; /* Safari 4+ */
-  animation: show 0ms 1;
-  -moz-animation: show 0ms 1;
-  -o-animation: show 0ms 1;
-}
-
 .site-text h1 {
   font-size: 1.5rem;
 	text-align: left;
   padding: 1em 1.5em 1em 1.5em;
 	margin-top: .25em;
 	background-position: left;
-  -webkit-animation: show 1000ms 1; /* Safari 4+ */
-  animation: show 1000ms 1;
-  -moz-animation: show 1000ms 1;
-  -o-animation: show 1000ms 1;
   @include breakpoint(medium) {
   	text-align: center;
     padding: 2em 1em 1em 4em;
@@ -330,10 +322,6 @@ NAVIGATION STYLES
 			display: inline-table;
 			width: 100%;
       text-align: center;
-			-webkit-animation: show 500ms 1; /* Safari 4+ */
-			animation: show 500ms 1;
-			-moz-animation: show 500ms 1;
-			-o-animation: show 500ms 1;
 		}
 	}
 }
@@ -432,18 +420,16 @@ POSTS & CONTENT STYLES
 *********************/
 
 img {
-  -webkit-animation: show 2000ms 1; /* Safari 4+ */
-  animation: show 2000ms 1;
-  -moz-animation: show 2000ms 1;
-  -o-animation: show 2000ms 1;
+
 }
 
 #content {
-
+  margin-top: 6em;
 	@include breakpoint(medium) {
+      margin-top: 7em;
 	}
 	@include breakpoint(large) {
-
+  margin-top: 16em;
 	}
 	#inner-content {
 		padding: 2rem 0rem;
@@ -816,6 +802,10 @@ i.fa.fa-external-link {
   position: relative;
   height: 200px;
   background: teal;
+  -webkit-animation: show 4000ms 1; /* Safari 4+ */
+  animation: show 4000ms 1;
+  -moz-animation: show 4000ms 1;
+  -o-animation: show 4000ms 1;
   @include breakpoint(medium) {
   height: 300px;
   }
