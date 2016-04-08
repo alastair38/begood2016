@@ -3813,6 +3813,18 @@ ul#menu-main-1 {
   ul#menu-main-1 li ul {
     width: 100%; }
 
+.is-dropdown-submenu-parent:after {
+  content: '\f105';
+  font-family: 'Fontawesome';
+  position: absolute;
+  top: .45em;
+  right: 0px;
+  transition: 200ms; }
+
+.is-dropdown-submenu-parent:hover:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
 .top-bar-right img {
   margin-top: 59px;
   height: 49px;

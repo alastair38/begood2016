@@ -12,8 +12,30 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 
 	} else if ( is_page()  && count( $children ) > 0 ) {
 	get_template_part( 'parts/loop', 'child-pages' );
+
 } else if ( is_page_template( 'page-projects.php' ) ) {
-		 get_template_part( 'parts/loop', 'researcher-links' );
+
+	$post_objects = get_field('project_staff');
+
+	if( $post_objects ) {
+
+	    		foreach( $post_objects as $post_object): ?>
+	        	<div id="parent-<?php the_ID(); ?>" class="researcher-links">
+	            <h3><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
+							<?php
+								echo get_the_post_thumbnail($post_object->ID, array(100, 100), array( 'class' => 'large-4 show-for-large columns' ));
+
+							?>
+							<p class="large-8 columns">
+								<?php
+								the_field('project_description', $post_object->ID);
+								?>
+							</p>
+	        </div>
+	    <?php endforeach;
+		} else {
+				get_template_part( 'parts/loop', 'researcher-links' );
+			}
 
 } else if ( is_home() || is_tag()) {
 
