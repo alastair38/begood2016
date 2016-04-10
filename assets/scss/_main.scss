@@ -85,13 +85,19 @@ GENERAL STYLES
   padding:3px 0;
   &.fixed {
     position:fixed;
-    bottom:0;
+    bottom:1em;
     left:0;
     width:100%;
+    @include breakpoint(medium) {
+    bottom:0;
+    }
   }
   &.fixed.bottom {
-    bottom:0px;
+    bottom:1em;
     top:auto;
+    @include breakpoint(medium) {
+    bottom:0;
+    }
   }
 }
 
@@ -322,7 +328,7 @@ ul#menu-main-1 {
   content: '\f105';
   font-family: 'Fontawesome' ;
   position: absolute;
-  top: .45em; 
+  top: .45em;
   right: 0px;
   transition: 200ms;
 }
@@ -803,17 +809,27 @@ i.fa.fa-external-link {
     position: absolute;
     font-size: .75em;
     background: rgba(255,255,255,.9);
-    bottom: 2rem;
+    bottom: .5rem;
     left: 10%;
     padding: 10px;
     max-width: 80%;
+    h3 {
+      font-size: 1rem;
+    }
     @include breakpoint(medium) {
     font-size: 1em;
+    bottom: 2rem;
+    h3 {
+      font-size: 1.5rem;
+    }
     }
     @include breakpoint(large) {
     left: 5%;
     max-width: 90%;
     font-size: 1em;
+    h3 {
+      font-size: 1.75rem;
+    }
     }
 
   }

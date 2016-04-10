@@ -3633,12 +3633,18 @@ GENERAL STYLES
   padding: 3px 0; }
   #cookie-bar.fixed {
     position: fixed;
-    bottom: 0;
+    bottom: 1em;
     left: 0;
     width: 100%; }
+    @media screen and (min-width: 32em) {
+      #cookie-bar.fixed {
+        bottom: 0; } }
   #cookie-bar.fixed.bottom {
-    bottom: 0px;
+    bottom: 1em;
     top: auto; }
+    @media screen and (min-width: 32em) {
+      #cookie-bar.fixed.bottom {
+        bottom: 0; } }
 
 #cookie-bar p {
   margin: 0;
@@ -4191,18 +4197,25 @@ i.fa.fa-external-link {
     position: absolute;
     font-size: .75em;
     background: rgba(255, 255, 255, 0.9);
-    bottom: 2rem;
+    bottom: .5rem;
     left: 10%;
     padding: 10px;
     max-width: 80%; }
+    .carousel article h3 {
+      font-size: 1rem; }
     @media screen and (min-width: 32em) {
       .carousel article {
-        font-size: 1em; } }
+        font-size: 1em;
+        bottom: 2rem; }
+        .carousel article h3 {
+          font-size: 1.5rem; } }
     @media screen and (min-width: 64em) {
       .carousel article {
         left: 5%;
         max-width: 90%;
-        font-size: 1em; } }
+        font-size: 1em; }
+        .carousel article h3 {
+          font-size: 1.75rem; } }
 
 button.slick-next.slick-arrow {
   position: absolute;
