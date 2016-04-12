@@ -8,7 +8,7 @@
 
     <section class="entry-content" itemprop="articleBody">
 		<?php if(is_singular('post')) {
-			the_post_thumbnail('full');
+			the_post_thumbnail('large', array('class' => 'aligncenter'));
 		}
 		the_content(); ?>
 	</section> <!-- end article section -->
