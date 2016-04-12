@@ -7,7 +7,10 @@
     </header> <!-- end article header -->
 
     <section class="entry-content" itemprop="articleBody">
-		<?php the_content(); ?>
+		<?php if(is_singular('post')) {
+			the_post_thumbnail('full');
+		}
+		the_content(); ?>
 	</section> <!-- end article section -->
 
 	<footer class="article-footer">

@@ -78,26 +78,24 @@ GENERAL STYLES
 
 #cookie-bar {
   background:rgba(0,0,0, .85);
-  height:2rem;
+  height:3rem;
   line-height:2rem;
   color:#eeeeee;
   text-align:center;
   padding:3px 0;
+  @include breakpoint(medium) {
+  height:2rem;
+  }
   &.fixed {
     position:fixed;
-    bottom:1em;
+    height:3rem;
+    bottom:0;
     left:0;
     width:100%;
-    @include breakpoint(medium) {
-    bottom:0;
-    }
   }
   &.fixed.bottom {
     bottom:1em;
     top:auto;
-    @include breakpoint(medium) {
-    bottom:0;
-    }
   }
 }
 
@@ -251,7 +249,6 @@ HEADER STYLES
   font-size: 1.5rem;
 	text-align: left;
   padding: 1em 1.5em 1em 1.5em;
-	margin-top: .25em;
 	background-position: left;
   @include breakpoint(medium) {
   	text-align: center;
@@ -301,6 +298,7 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
 	width: 100%;
+  font-weight: 600;
 	.main-menu {
     &.columns.show-for-large {
 
@@ -375,6 +373,13 @@ li#logout {
 
 li.menu-button {
 	border: 1px solid $light-gray;
+    background: $light-gray;
+  &:hover {
+    background: $light-gray;
+  }
+  a {
+    padding: 5px;
+  }
 }
 
 .off-canvas-wrapper {
@@ -426,7 +431,10 @@ POSTS & CONTENT STYLES
   margin-top: 16em;
 	}
 	#inner-content {
-		padding: 2rem 0rem;
+		padding: 0rem;
+    @include breakpoint(medium) {
+      padding: 2rem 0rem;
+  	}
 	}
 }
 
@@ -561,10 +569,6 @@ i.fa.fa-external-link {
 }
 
 .home .entry-content {
-  @include breakpoint(medium) {
-    padding-top: 1em;
-    padding-bottom: 1em;
-	}
 }
 
 .home .article-header {
@@ -616,15 +620,17 @@ i.fa.fa-external-link {
 }
 
 
+.wp-post-image {
+  margin-bottom: 1em;
+}
+
 .page-template-page-projects .entry-content,
 .page-template-default .entry-content {
   padding: 0;
-
 	img {
 		max-width: 100%;
 		height: auto;
 	}
-
 	.alignleft, img.alignleft {
 		margin-right: 1.5em;
 		display: inline;

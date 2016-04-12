@@ -34,7 +34,7 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 	        </div>
 	    <?php endforeach;
 		} else {
-				get_template_part( 'parts/loop', 'researcher-links' );
+				get_template_part( 'parts/loop', 'posts' );
 			}
 
 } else if ( is_home() || is_tag()) {

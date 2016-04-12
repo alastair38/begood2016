@@ -4,9 +4,9 @@
 			<li class="site-text">
 				<?php
 					if ( is_page_template( 'page-projects.php' ) && !is_page( 'other-projects-of-interest' ) ) {?>
-				<a href="<?php bloginfo('url');?>"><h1 style="background:url(<?php the_post_thumbnail_url( 'medium' )?>) no-repeat; background-size: contain";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1></a>
+				<a href="<?php bloginfo('url');?>"><h1 style="background:url(<?php the_post_thumbnail_url( 'medium' )?>) no-repeat; background-size: contain;"><span class="screen-reader-text"><?php bloginfo('name');?></span></h1></a>
 				<?php } else {?>
-					<a href="<?php bloginfo('url');?>"><h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: contain";><span class="screen-reader-text"><?php bloginfo('name');?></span></h1></a>
+					<a href="<?php bloginfo('url');?>"><h1 style="background:url(<?php echo get_theme_mod( 'tcx_logo_image' )?>) no-repeat; background-size: contain;"><span class="screen-reader-text"><?php bloginfo('name');?></span></h1></a>
 
 			<?php	}?>
 
@@ -35,16 +35,10 @@
 
 
 
-	<div class="top-bar-right float-right show-for-small-only">
+	<div class="top-bar-right float-right hide-for-large">
 		<ul class="menu">
-			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-			<li class="menu-button"><a data-toggle="off-canvas">MENU</a></li>
-		</ul>
-	</div>
-	<div class="top-bar-right float-right show-for-medium-only">
-		<ul class="menu">
-			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-			<li class="menu-button"><a data-toggle="off-canvas">MENU</a></li>
+			<li><button class="menu-icon dark" type="button" data-toggle="off-canvas"></button></li>
+			<!-- <li class="menu-button"><a data-toggle="off-canvas">MENU</a></li> -->
 		</ul>
 	</div>
 </div>
