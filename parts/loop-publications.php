@@ -1,13 +1,9 @@
 <div class="latest_pubs columns">
 
 	<?php
-	if (is_front_page()) {
-		$posts_per_page = 3;
-	} else {
-		$posts_per_page = 15;
-	}
+
 	$args = array(
-		'posts_per_page' => $post_per_page,
+		'posts_per_page' => 3,
 		'post_type' => 'resources',
 		'tax_query' => array(
 				array(
