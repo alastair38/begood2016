@@ -3626,7 +3626,7 @@ GENERAL STYLES
 
 #cookie-bar {
   background: rgba(0, 0, 0, 0.85);
-  height: 3rem;
+  height: 4rem;
   line-height: 2rem;
   color: #eeeeee;
   text-align: center;
@@ -3641,7 +3641,7 @@ GENERAL STYLES
     left: 0;
     width: 100%; }
   #cookie-bar.fixed.bottom {
-    bottom: 1em;
+    bottom: 0;
     top: auto; }
 
 #cookie-bar p {
@@ -3804,6 +3804,9 @@ NAVIGATION STYLES
 .top-bar {
   width: 100%;
   font-weight: 600; }
+
+button.menu-icon.dark:focus {
+  background: none; }
 
 ul#menu-main-1 {
   display: inline-table;
@@ -3974,12 +3977,8 @@ i.fa.fa-external-link {
   padding: 0px 5px; }
 
 #main {
-  min-height: 60vh;
   padding-bottom: 1em;
   margin-bottom: 0em; }
-
-.home #main {
-  min-height: auto; }
 
 .home article h1 {
   color: #455A64; }
@@ -4166,7 +4165,7 @@ i.fa.fa-external-link {
         font-size: 1.5rem; } }
   .researcher-links p {
     text-align: right;
-    padding-right: 0;
+    padding-right: 0px;
     font-size: .9rem; }
     @media screen and (min-width: 64em) {
       .researcher-links p {

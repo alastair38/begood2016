@@ -78,7 +78,7 @@ GENERAL STYLES
 
 #cookie-bar {
   background:rgba(0,0,0, .85);
-  height:3rem;
+  height:4rem;
   line-height:2rem;
   color:#eeeeee;
   text-align:center;
@@ -94,7 +94,7 @@ GENERAL STYLES
     width:100%;
   }
   &.fixed.bottom {
-    bottom:1em;
+    bottom:0;
     top:auto;
   }
 }
@@ -306,6 +306,9 @@ NAVIGATION STYLES
 	}
 }
 
+button.menu-icon.dark:focus {
+  background: none;
+}
 
 ul#menu-main-1 {
   display: inline-table;
@@ -549,13 +552,11 @@ i.fa.fa-external-link {
 }
 
 #main {
-    min-height: 60vh;
 		padding-bottom: 1em;
 		margin-bottom: 0em;
 }
 
 .home #main {
-  min-height: auto;
 }
 
 .home article h1 {
@@ -772,7 +773,7 @@ i.fa.fa-external-link {
   }
   p {
     text-align: right;
-    padding-right: 0;
+    padding-right: 0px;
     font-size: .9rem;
     @include breakpoint(large) {
     	font-size: 1.3rem;
