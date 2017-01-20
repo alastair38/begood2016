@@ -3662,7 +3662,8 @@ HEADER STYLES
   left: 0;
   right: 0;
   z-index: 100;
-  background: #f6f6f6; }
+  background: #f6f6f6;
+  transition: 250ms; }
   .header ul.off-canvas-list li {
     list-style: none; }
 
@@ -3689,6 +3690,11 @@ HEADER STYLES
     color: #455A64; }
     .site-text h1 a:hover, .site-text h1 a:focus {
       color: #1f88b4; }
+
+@media screen and (min-width: 62.5em) {
+  .translateY {
+    transform: translateY(-200px);
+    transition: 250ms; } }
 
 .home .site-text.smaller h1 {
   text-align: left;

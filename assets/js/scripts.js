@@ -27,6 +27,20 @@ jQuery(document).ready(function() {
 		}
 	});
 
+
+
+  jQuery(window).scroll(function() {
+        var scroll = jQuery(window).scrollTop();
+
+       if (scroll >= 250) {
+           jQuery(".header").addClass('translateY');
+       } else {
+       jQuery(".header").removeClass('translateY');
+
+
+        }
+	});
+
 	//Click event to scroll to top
 	jQuery('.scrollToTop').click(function(){
 		jQuery('html, body').animate({scrollTop : 0},800);

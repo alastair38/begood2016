@@ -234,6 +234,7 @@ HEADER STYLES
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */
 	z-index: 100;
   background: #f6f6f6;
+  transition: 250ms;
 
 	ul.off-canvas-list li {
 		list-style: none;
@@ -267,6 +268,13 @@ HEADER STYLES
 			}
 	}
 
+}
+
+.translateY {
+  @include breakpoint(large) {
+  transform: translateY(-200px);
+  transition: 250ms;
+}
 }
 
 
